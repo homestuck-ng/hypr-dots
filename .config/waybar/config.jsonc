@@ -1,0 +1,31 @@
+{
+  "reload_style_on_change": true,
+  "toggle": true,
+  "layer": "top",
+  "position": "left",
+  "margin-top": 10,
+  "margin-bottom": 10,
+  "margin-left": 10,
+  "margin-right": 0,
+  "spacing": 0,
+  "include": ["~/.config/waybar/modules.json"],
+  "modules-left": ["custom/cachy", "clock", "mpris", "cpu"],
+  "modules-center": ["niri/workspaces", "hyprland/window", "privacy"],
+  "modules-right": [
+    "group/extras",
+    "network",
+    "bluetooth",
+    "pulseaudio#microphone",
+    "group/audio",
+    "group/brightness",
+    "battery",
+    "custom/powermenu"
+  ],
+  "cpu":{ 
+    "format": "{usage} %",
+    "rotate": 90
+        },
+  "hyprland/window":{
+    "rotate": 90
+                    }
+}

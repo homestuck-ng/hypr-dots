@@ -1,0 +1,73 @@
+window {
+    margin: 3px;
+    border: 2px solid #55534F;
+    background-color: #130D0E;
+    border-radius: 0px;
+}
+
+#input {
+    margin: 5px;
+    border: none;
+    color: #ABAEAC;
+    background-color: #9B736E;
+    border-radius: 0px;
+    padding: 8px;
+}
+
+#inner-box {
+    margin: 5px;
+    border: none;
+    background-color: #130D0E;
+}
+
+#outer-box {
+    margin: 5px;
+    border: none;
+    background-color: #130D0E;
+}
+
+#scroll {
+    margin: 0px;
+    border: none;
+}
+
+#text {
+    margin: 5px;
+    border: none;
+    color: #ABAEAC;
+    padding: 4px;
+}
+
+#entry.activatable #text {
+    color: #130D0E;
+}
+
+#entry > * {
+    color: #ABAEAC;
+}
+
+#entry:selected {
+    background-color: #55534F;
+    border-radius: 0px;
+}
+
+#entry:selected #text {
+    font-weight: bold;
+    color: #55534F;
+}
+
+/* Дополнительные селекторы для более полной кастомизации */
+#entry:hover {
+    background-color: #D7925F4D; /* 30% прозрачность */
+}
+
+#entry:focus {
+    background-color: #9B736E;
+    outline: none;
+}
+
+/* Стилизация для изображений (если используется allow_images=true) */
+image {
+    margin-right: 8px;
+    border-radius: 2px;
+}
