@@ -1,14 +1,14 @@
-# hypr-dots
-[BETA] My Hyprland Dotfiles
+# [BETA] My Hyprland Dotfiles
 
-Requirements:
-waybar
-wallust
-fastfetch
-fish
-kitty
-nwg-look
-wofi
-mako
+![alt text](https://github.com/homestuck-ng/hypr-dots/blob/main/picture.jpg?raw=true)
 
-just do backup!
+## **Requirements:**
+- waybar
+- wallust
+- fastfetch
+- fish
+- kitty
+- nwg-look
+- wofi
+- mako 
+#### pls do backup!
