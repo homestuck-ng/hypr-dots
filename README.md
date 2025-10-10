@@ -1,2 +1,14 @@
 # hypr-dots
-My Hyprland Dotfiles
+[BETA] My Hyprland Dotfiles
+
+Requirements:
+waybar
+wallust
+fastfetch
+fish
+kitty
+nwg-look
+wofi
+mako
+
+just do backup!
