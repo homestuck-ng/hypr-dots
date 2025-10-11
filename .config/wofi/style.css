@@ -2,7 +2,7 @@ window {
     margin: 3px;
     border: 2px solid #54534E;
     background-color: #130C0E;
-    border-radius: 0px;
+    border-radius: 4px;
 }
 
 #input {
@@ -11,7 +11,7 @@ window {
     font-weight: bold;
     color: #AAAEAB;
     background-color: #7E7E92;
-    border-radius: 0px;
+    border-radius: 4px;
     padding: 8px;
 }
 
@@ -23,7 +23,8 @@ window {
 
 #outer-box {
     margin: 5px;
-    border: none;
+   
+    border-radius: 4px;
     background-color: #130C0E;
 }
 
@@ -51,7 +52,7 @@ window {
 
 #entry:selected {
     background-color: #54534E;
-    border-radius: 0px;
+    border-radius: 4px;
 }
 
 #entry:selected #text {

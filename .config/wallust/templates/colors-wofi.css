@@ -2,7 +2,7 @@ window {
     margin: 3px;
     border: 2px solid {{color0}};
     background-color: {{background}};
-    border-radius: 0px;
+    border-radius: 4px;
 }
 
 #input {
@@ -11,7 +11,7 @@ window {
     font-weight: bold;
     color: {{foreground}};
     background-color: {{color4}};
-    border-radius: 0px;
+    border-radius: 4px;
     padding: 8px;
 }
 
@@ -23,7 +23,8 @@ window {
 
 #outer-box {
     margin: 5px;
-    border: none;
+   
+    border-radius: 4px;
     background-color: {{background}};
 }
 
@@ -51,7 +52,7 @@ window {
 
 #entry:selected {
     background-color: {{color0}};
-    border-radius: 0px;
+    border-radius: 4px;
 }
 
 #entry:selected #text {
