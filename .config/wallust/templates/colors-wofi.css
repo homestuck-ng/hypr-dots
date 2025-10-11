@@ -36,12 +36,12 @@ window {
     font-weight: bold;
     margin: 5px;
     border: none;
-    color: 101010;
+    color: {{foreground}};
     padding: 4px;
 }
 
 #entry.activatable #text {
-    color: FFFFFF;
+    color: {{foreground}};
     font-weight: bold;
 }
 
@@ -56,14 +56,10 @@ window {
 
 #entry:selected #text {
     font-weight: bold;
-    color: FFFFFF;
+    color: {{background}};
 }
 
 /* Дополнительные селекторы для более полной кастомизации */
-#entry:hover {
-    background-color: {{color6}}4D; /* 30% прозрачность */
-}
-
 #entry:focus {
     background-color: {{color4}};
     outline: none;

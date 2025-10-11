@@ -221,7 +221,7 @@
 },
 "custom/powermenu": {
   "format": "<span size='13pt'>󰐥</span>",
-  "on-click": "$HOME/.config/rofi/powermenu/powermenu.sh",
+  "on-click": "$HOME/.config/wofi/wofi-powermenu.sh",
   "tooltip": false
 }
 }
