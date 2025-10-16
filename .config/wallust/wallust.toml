@@ -64,8 +64,8 @@ gtk4 = { src = 'gtk.css', dst = '~/.config/gtk-4.0/colors.css' }
 
 #zathurarc = { src = 'zathurarc', dst = '~/.config/zathura/zathurarc' }
 
-hyprland = { src = 'colors-hypr.conf', dst = '~/.config/hypr/colors-hypr.conf' } 
+hyprland = { src = 'border.conf', dst = '~/.config/hypr/config/border.conf' } 
 
-mako = { src = 'colors-mako', dst = '~/.config/mako/config' }
+swaync = { src = "swaync.css", dst = "~/.config/swaync/colors.css" }
 
-wofi = { src = 'colors-wofi.css', dst = '~/.config/wofi/style.css' }
+wofi = { src = 'colors-wofi.css', dst = '~/.config/wofi/colors.css' }

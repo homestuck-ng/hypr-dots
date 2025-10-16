@@ -1,73 +1,85 @@
+/* ~/.config/wofi/style.css - Auto-generated from colors.css */
+
 window {
-    margin: 3px;
-    border: 2px solid #54534E;
-    background-color: #130C0E;
-    border-radius: 4px;
+    margin: 5px;
+    border-radius: 8px;
+    background-color: rgba(29,28,20, 0.9);
+    font-family: "Liga SFMono Nerd Font", monospace;
 }
 
 #input {
-    margin: 5px;
-    border: none;
-    font-weight: bold;
-    color: #AAAEAB;
-    background-color: #7E7E92;
-    border-radius: 4px;
-    padding: 8px;
+    margin: 8px;
+    padding: 10px 12px;
+    border: 2px solid #928f7a;
+    border-radius: 8px;
+    color: #A9B2B4;
+    background-color: rgba(62,61,62, 0.8);
+    outline: none;
+    caret-color: #BF6E3F;
+    font-size: 14px;
+}
+
+#input:focus {
+    border-color: #BF6E3F;
+    box-shadow: 0 0 8px rgba(98,150,194, 0.3);
 }
 
 #inner-box {
-    margin: 5px;
-    border: none;
-    background-color: #130C0E;
+    margin: 8px;
+    padding-top: 5px;
+    background-color: transparent;
 }
 
 #outer-box {
-    margin: 5px;
-   
-    border-radius: 4px;
-    background-color: #130C0E;
+    margin: 0;
+    padding: 5px;
+    background-color: transparent;
 }
 
 #scroll {
-    margin: 0px;
-    border: none;
+    margin: 0;
+    padding: 5px;
 }
 
 #text {
-    font-weight: bold;
-    margin: 5px;
-    border: none;
-    color: #AAAEAB;
-    padding: 4px;
+    margin: 3px;
+    padding: 3px;
+    color: #A9B2B4;
+    font-size: 13px;
 }
 
-#entry.activatable #text {
-    color: #AAAEAB;
+#text:selected {
+    color: #BF6E3F;
     font-weight: bold;
 }
 
-#entry > * {
-    color: #AAAEAB;
+#entry {
+    padding: 8px;
+    margin: 2px 5px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+#entry:hover {
+    background-color: rgba(98,150,194, 0.2);
 }
 
 #entry:selected {
-    background-color: #54534E;
-    border-radius: 4px;
+    background-color: rgba(98,150,194, 0.4);
+    box-shadow: 0 2px 6px rgba(98,150,194, 0.2);
 }
 
-#entry:selected #text {
-    font-weight: bold;
-    color: #130C0E;
+#img {
+    margin-right: 10px;
+    margin-left: 5px;
 }
 
-/* Дополнительные селекторы для более полной кастомизации */
-#entry:focus {
-    background-color: #7E7E92;
-    outline: none;
+#unselected {
+    opacity: 0.85;
 }
 
-/* Стилизация для изображений (если используется allow_images=true) */
-image {
-    margin-right: 8px;
-    border-radius: 2px;
+#urgent {
+    background-color: rgba(65,84,89, 0.3);
+    color: #415459;
+    border-left: 3px solid #415459;
 }

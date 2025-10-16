@@ -1,73 +1,31 @@
-window {
-    margin: 3px;
-    border: 2px solid {{color0}};
-    background-color: {{background}};
-    border-radius: 4px;
-}
+/* CSS variables for wallust
+ * You can use this template by adding the following to wallust.toml:
+css = { src = "wofi.css", dst = "~/.config/wofi/colors.css" }
+ */
 
-#input {
-    margin: 5px;
-    border: none;
-    font-weight: bold;
-    color: {{foreground}};
-    background-color: {{color4}};
-    border-radius: 4px;
-    padding: 8px;
-}
+:root {
+    --wallpaper: url("{{wallpaper}}");
 
-#inner-box {
-    margin: 5px;
-    border: none;
-    background-color: {{background}};
-}
+    /* Special */
+    --background: {{background}};
+    --foreground: {{foreground}};
+    --cursor: {{cursor}};
 
-#outer-box {
-    margin: 5px;
-   
-    border-radius: 4px;
-    background-color: {{background}};
-}
-
-#scroll {
-    margin: 0px;
-    border: none;
-}
-
-#text {
-    font-weight: bold;
-    margin: 5px;
-    border: none;
-    color: {{foreground}};
-    padding: 4px;
-}
-
-#entry.activatable #text {
-    color: {{foreground}};
-    font-weight: bold;
-}
-
-#entry > * {
-    color: {{foreground}};
-}
-
-#entry:selected {
-    background-color: {{color0}};
-    border-radius: 4px;
-}
-
-#entry:selected #text {
-    font-weight: bold;
-    color: {{background}};
-}
-
-/* Дополнительные селекторы для более полной кастомизации */
-#entry:focus {
-    background-color: {{color4}};
-    outline: none;
-}
-
-/* Стилизация для изображений (если используется allow_images=true) */
-image {
-    margin-right: 8px;
-    border-radius: 2px;
+    /* Colors */
+    --color0:  {{color0 }};
+    --color1:  {{color1 }};
+    --color2:  {{color2 }};
+    --color3:  {{color3 }};
+    --color4:  {{color4 }};
+    --color5:  {{color5 }};
+    --color6:  {{color6 }};
+    --color7:  {{color7 }};
+    --color8:  {{color8 }};
+    --color9:  {{color9 }};
+    --color10: {{color10}};
+    --color11: {{color11}};
+    --color12: {{color12}};
+    --color13: {{color13}};
+    --color14: {{color14}};
+    --color15: {{color15}};
 }
