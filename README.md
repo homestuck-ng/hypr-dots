@@ -35,9 +35,9 @@ or
     paru -S --noconfirm cliphist blueman pavucontrol waybar wallust fastfetch fish dunst switch swww hyprctl imagemagick alacritty nwg-look wofi swaync waytrogen flameshot
 
 ### **Install dotfiles**
-   git clone https://github.com/homestuck-ng/hypr-dots.git
-   cd hypr-dots
-   cp -rf .config ~/
+    git clone https://github.com/homestuck-ng/hypr-dots.git
+    cd hypr-dots
+    cp -rf .config ~/
 ## Functions
 
 ### **How to install wallpaper**
