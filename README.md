@@ -45,15 +45,25 @@ type `"swww img <file>"`
 then press `Super + O` to sync theme
 ### **Binds**
 Set your hot keys in `~/.config/hypr/keybinds/keybinds.conf`
+
 Default:
+
 `Super + Q` - terminal (default `alacritty`)
+
 `Super + O` - sync theme `~/.config/scripts/theme/theme-sync.sh`
+
 `Super + B` - run browser (`firefox`)
+
 `Super + R` - run wofi dmenu
+
 `Super + W` - change wallpapers with `waytrogen`
+
 `Super + C` - kill active window
+
 `Super + F` - make window full screen
+
 `PrintScr` - screenshot using `flameshot`
-and another (in `~/.config/hypr/keybinds/keybinds.conf`)
+
 `Super + L` - lock screen
 
+and another (in `~/.config/hypr/keybinds/keybinds.conf`)
