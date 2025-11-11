@@ -27,8 +27,11 @@
     - flameshot
 ### **Fast requirements install**
 You can install all dependencies using:
+
 `yay -S --noconfirm cliphist blueman pavucontrol waybar wallust fastfetch fish firefox dunst switch swww hyprctl playerctl imagemagick alacritty nwg-look wofi swaync waytrogen flameshot`
+
 or
+
 `paru -S --noconfirm cliphist blueman pavucontrol waybar wallust fastfetch fish dunst switch swww hyprctl imagemagick alacritty nwg-look wofi swaync waytrogen flameshot`
 ## Functions
 
