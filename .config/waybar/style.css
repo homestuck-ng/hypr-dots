@@ -3,14 +3,14 @@
 * {
   font-family: "JetBrainsMono Nerd Font Propo";
   font-size: 16px;
-  border-radius: 4px;
+  border-radius: 0px;
   box-shadow: none;
 }
 
 window#waybar {
   background: @background;
   opacity: 0.9;
-  border: 1px solid @color1;
+  border: 2px solid @color1;
 }
 
 #custom-cachy:hover,
