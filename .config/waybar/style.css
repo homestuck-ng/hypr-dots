@@ -9,7 +9,6 @@
 
 window#waybar {
   background: @background;
-  opacity: 0.9;
   border: 2px solid @color1;
 }
 
@@ -21,7 +20,7 @@ window#waybar {
 #pulseaudio.microphone:hover,
 #pulseaudio.sink-muted:hover,
 #custom-powermenu:hover {
-  opacity: 0.5;
+  opacity: 1;
 }
 
 #custom-cachy,

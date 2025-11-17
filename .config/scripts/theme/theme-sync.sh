@@ -333,8 +333,8 @@ reload_system_components() {
     # restart_dunst
     reload_swaync
     restart_hyprswitch
-    reload_hyprland_plugins
-    
+    #reload_hyprland_plugins
+    reload_waybar
     log_success "All system components reloaded successfully"
 }
 
