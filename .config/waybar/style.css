@@ -9,7 +9,7 @@
 
 window#waybar {
   background: @background;
-  border: 2px solid @color1;
+  border: 0px solid @color5;
 }
 
 #custom-cachy:hover,
