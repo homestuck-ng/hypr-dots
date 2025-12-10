@@ -2,31 +2,31 @@
 
 window {
     margin: 5px;
-    border-radius: 8px;
-    background-color: rgba(29,28,20, 0.9);
-    font-family: "Liga SFMono Nerd Font", monospace;
+    border-radius: 0px;
+    background-color: rgba(3,26,35, 1);
+    font-family: "JetBrains Nerd Font", monospace;
 }
 
 #input {
     margin: 8px;
     padding: 10px 12px;
-    border: 2px solid #928f7a;
-    border-radius: 8px;
-    color: #A9B2B4;
-    background-color: rgba(62,61,62, 0.8);
+    border: 2px solid #988a82;
+    border-radius: 0px;
+    color: #B2B0AE;
+    background-color: rgba(57,57,59, 0.8);
     outline: none;
-    caret-color: #BF6E3F;
+    caret-color: #658B9F;
     font-size: 14px;
 }
 
 #input:focus {
-    border-color: #BF6E3F;
-    box-shadow: 0 0 8px rgba(98,150,194, 0.3);
+    border-color: #658B9F;
+    box-shadow: 0 0 8px rgba(93,145,163, 0.3);
 }
 
 #inner-box {
     margin: 8px;
-    padding-top: 5px;
+    padding-top: 0px;
     background-color: transparent;
 }
 
@@ -38,35 +38,81 @@ window {
 
 #scroll {
     margin: 0;
-    padding: 5px;
+    padding: 0px;
 }
 
 #text {
     margin: 3px;
     padding: 3px;
-    color: #A9B2B4;
+    color: #B2B0AE;
     font-size: 13px;
 }
 
 #text:selected {
-    color: #BF6E3F;
+    color: #658B9F;
     font-weight: bold;
 }
 
+/* ОСНОВНЫЕ ПУНКТЫ */
 #entry {
-    padding: 8px;
+    padding: 5px;
     margin: 2px 5px;
-    border-radius: 8px;
+    border-radius: 0px;
     transition: all 0.2s ease;
+    outline: none;
+    border: none;
 }
 
 #entry:hover {
-    background-color: rgba(98,150,194, 0.2);
+    background-color: rgba(93,145,163, 0.2);
 }
 
 #entry:selected {
-    background-color: rgba(98,150,194, 0.4);
-    box-shadow: 0 2px 6px rgba(98,150,194, 0.2);
+    background-color: rgba(93,145,163, 0.4);
+    box-shadow: 0 2px 6px rgba(93,145,163, 0.2);
+    outline: none !important;
+    border: none !important;
+}
+
+/* === СКРЫТО: ВСЕ ПОДМЕНЮ === */
+expander {
+    display: none !important;
+}
+
+expander > list {
+    display: none !important;
+}
+
+#entry.activatable {
+    display: none !important;
+}
+
+#entry.activatable:hover {
+    display: none !important;
+}
+
+#entry.activatable:selected {
+    display: none !important;
+}
+
+#entry.activatable #text {
+    display: none !important;
+}
+
+#entry.activatable #text:selected {
+    display: none !important;
+}
+
+#entry arrow {
+    display: none !important;
+}
+
+#entry arrow:hover {
+    display: none !important;
+}
+
+#expander-box {
+    display: none !important;
 }
 
 #img {
@@ -79,7 +125,11 @@ window {
 }
 
 #urgent {
-    background-color: rgba(65,84,89, 0.3);
-    color: #415459;
-    border-left: 3px solid #415459;
+    background-color: rgba(86,79,77, 0.3);
+    color: #564F4D;
+    border-left: 3px solid #564F4D;
 }
+
+
+
+

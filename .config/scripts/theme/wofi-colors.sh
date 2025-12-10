@@ -20,8 +20,7 @@ readonly CONFIG_DIR="$HOME/.config"
 readonly WOFI_DIR="$CONFIG_DIR/wofi"
 readonly COLORS_FILE="$WOFI_DIR/colors.css"
 readonly STYLE_FILE="$WOFI_DIR/style.css"
-readonly FONT_FAMILY="Liga SFMono Nerd Font"
-
+readonly FONT_FAMILY="JetBrains Nerd Font"
 # Default fallback colors
 declare -rA DEFAULT_COLORS=(
     ["BG"]="2A2D2E"
@@ -98,8 +97,8 @@ generate_wofi_style() {
 
 window {
     margin: 5px;
-    border-radius: 8px;
-    background-color: rgba(${DERIVED_COLORS[BG_RGB]}, 0.9);
+    border-radius: 0px;
+    background-color: rgba(${DERIVED_COLORS[BG_RGB]}, 1);
     font-family: "${FONT_FAMILY}", monospace;
 }
 
@@ -107,7 +106,7 @@ window {
     margin: 8px;
     padding: 10px 12px;
     border: 2px solid #${DERIVED_COLORS[ACCENT]};
-    border-radius: 8px;
+    border-radius: 0px;
     color: #${COLORS[FG]};
     background-color: rgba(${DERIVED_COLORS[C0_RGB]}, 0.8);
     outline: none;
@@ -122,7 +121,7 @@ window {
 
 #inner-box {
     margin: 8px;
-    padding-top: 5px;
+    padding-top: 0px;
     background-color: transparent;
 }
 
@@ -134,7 +133,7 @@ window {
 
 #scroll {
     margin: 0;
-    padding: 5px;
+    padding: 0px;
 }
 
 #text {
@@ -149,11 +148,14 @@ window {
     font-weight: bold;
 }
 
+/* ОСНОВНЫЕ ПУНКТЫ */
 #entry {
-    padding: 8px;
+    padding: 5px;
     margin: 2px 5px;
-    border-radius: 8px;
+    border-radius: 0px;
     transition: all 0.2s ease;
+    outline: none;
+    border: none;
 }
 
 #entry:hover {
@@ -163,6 +165,49 @@ window {
 #entry:selected {
     background-color: rgba(${DERIVED_COLORS[SELECTION_RGB]}, 0.4);
     box-shadow: 0 2px 6px rgba(${DERIVED_COLORS[SELECTION_RGB]}, 0.2);
+    outline: none !important;
+    border: none !important;
+}
+
+/* === СКРЫТО: ВСЕ ПОДМЕНЮ === */
+expander {
+    display: none !important;
+}
+
+expander > list {
+    display: none !important;
+}
+
+#entry.activatable {
+    display: none !important;
+}
+
+#entry.activatable:hover {
+    display: none !important;
+}
+
+#entry.activatable:selected {
+    display: none !important;
+}
+
+#entry.activatable #text {
+    display: none !important;
+}
+
+#entry.activatable #text:selected {
+    display: none !important;
+}
+
+#entry arrow {
+    display: none !important;
+}
+
+#entry arrow:hover {
+    display: none !important;
+}
+
+#expander-box {
+    display: none !important;
 }
 
 #img {
@@ -179,6 +224,10 @@ window {
     color: #${COLORS[C1]};
     border-left: 3px solid #${COLORS[C1]};
 }
+
+
+
+
 EOL
 }
 

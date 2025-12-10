@@ -4,28 +4,28 @@ css = { src = "wofi.css", dst = "~/.config/wofi/colors.css" }
  */
 
 :root {
-    --wallpaper: url("/home/amnesia/Wallpapers/dagestan/wallpaper.jpg");
+    --wallpaper: url("/home/amnesia/Wallpapers/arch/arch_nz.png");
 
     /* Special */
-    --background: #1D1C14;
-    --foreground: #A9B2B4;
-    --cursor: #AA7A5D;
+    --background: #031A23;
+    --foreground: #B2B0AE;
+    --cursor: #8C9DA7;
 
     /* Colors */
-    --color0:  #3E3D3E;
-    --color1:  #415459;
-    --color2:  #665044;
-    --color3:  #4784B8;
-    --color4:  #86836C;
-    --color5:  #BF6E3F;
-    --color6:  #907E8A;
-    --color7:  #7C888B;
-    --color8:  #565F61;
-    --color9:  #415459;
-    --color10: #665044;
-    --color11: #4784B8;
-    --color12: #86836C;
-    --color13: #BF6E3F;
-    --color14: #907E8A;
-    --color15: #7C888B;
+    --color0:  #39393B;
+    --color1:  #564F4D;
+    --color2:  #3A566E;
+    --color3:  #417E93;
+    --color4:  #8D7D75;
+    --color5:  #658B9F;
+    --color6:  #B4B6C2;
+    --color7:  #898584;
+    --color8:  #605D5C;
+    --color9:  #564F4D;
+    --color10: #3A566E;
+    --color11: #417E93;
+    --color12: #8D7D75;
+    --color13: #658B9F;
+    --color14: #B4B6C2;
+    --color15: #898584;
 }

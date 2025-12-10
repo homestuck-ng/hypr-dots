@@ -5,8 +5,6 @@
 # ~/.config/scripts/theme/theme-sync.sh
 # Description: Orchestrates system-wide theme updates based on current wallpaper
 # Author: saatvik333
-# Version: 3.0
-# Dependencies: swww, wallust, hyprctl, waybar, dunst, hyprswitch, imagemagick
 #===============================================================================
 
 set -euo pipefail
@@ -169,7 +167,11 @@ execute_gtk_theme_update() {
 
 execute_wallust_generation() {
     local -r wallpaper="$1"
-    
+
+    # Create .cache/wallust/colors_neopywal.vim for neovim colors scheme
+
+    touch ~/.cache/wallust/colors_neopywal.vim
+
     log_debug "Executing wallust theme generation"
     
     # Verify wallpaper accessibility
@@ -198,7 +200,8 @@ execute_wofi_color_update() {
     if ! "$WOFI_SCRIPT"; then
         die "Wofi color script failed"
     fi
-    
+    mkdir -p ~/.cache/wal
+    ln -sf ~/.cache/wallust/colors-wallust.toml ~/.cache/wal/colors-wal.vim    
     log_success "Wofi color update completed"
 }
 
@@ -320,8 +323,8 @@ reload_hyprland_plugins() {
     fi
 }
 
-reload_swaync() {
-    swaync-client -rs
+reload_mako() {
+    makoctl reload
 }
 
 reload_system_components() {
@@ -331,7 +334,7 @@ reload_system_components() {
     reload_hyprland
     # reload_waybar
     # restart_dunst
-    reload_swaync
+    reload_mako
     restart_hyprswitch
     #reload_hyprland_plugins
     reload_waybar
