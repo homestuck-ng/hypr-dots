@@ -1,5 +1,8 @@
+[env]
+term = "xterm-256color"
+
 [general]
-  import = ["alacritty-colors.conf"]
+  import = ["alaritty-themes/alacritty-colors.conf"]
 
 
 [window]

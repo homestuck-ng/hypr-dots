@@ -46,7 +46,7 @@ alpha = 100
 # zathura = { template = 'zathura', target = '~/.config/zathura/zathurarc' }
 #alacritty = { template = 'alacritty.toml', target = '~/.config/alacritty/colors.toml' }
 
-alacritty= { src = 'alacritty.conf', dst = '~/.config/alacritty-colors.conf' }
+alacritty= { src = 'alacritty.conf', dst = '~/.config/alacritty-themes/alacritty-colors.conf' }
 
 waybar = { src = 'waybar.css', dst = '~/.config/waybar/colors.css' }
 
