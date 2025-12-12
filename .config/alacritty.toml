@@ -2,7 +2,7 @@
 term = "xterm-256color"
 
 [general]
-  import = ["alaritty-themes/alacritty-colors.conf"]
+  import = ["~/.config/alacritty-themes/alacritty-colors.conf"]
 
 
 [window]
