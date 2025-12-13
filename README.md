@@ -9,7 +9,7 @@
     - blueman
     - pavucontrol
     - waybar
-    - wallust
+    - matugen
     - playerctl
     - fastfetch
     - fish
@@ -22,17 +22,17 @@
     - imagemagick
     - alacritty
     - nwg-look
-    - wofi
+    - rofi
     - waytrogen
     - flameshot
 ### **Fast requirements install**
 You can install all dependencies using:
 
-    yay -S --noconfirm cliphist blueman pavucontrol waybar wallust fastfetch fish firefox switch swww hyprctl playerctl imagemagick alacritty nwg-look wofi moki neovim waytrogen flameshot
+    yay -S --noconfirm cliphist blueman pavucontrol waybar matugen fastfetch fish firefox switch swww hyprctl playerctl imagemagick alacritty nwg-look rofi moki neovim waytrogen flameshot
 
 or
 
-    paru -S --noconfirm cliphist blueman pavucontrol waybar wallust fastfetch fish switch swww hyprctl imagemagick alacritty nwg-look wofi moki neovim waytrogen flameshot
+    paru -S --noconfirm cliphist blueman pavucontrol waybar matugen fastfetch fish switch swww hyprctl imagemagick alacritty nwg-look rofi moki neovim waytrogen flameshot
 
 ### **Install dotfiles**
     git clone https://github.com/homestuck-ng/hypr-dots.git
@@ -54,7 +54,7 @@ Default:
 
 `Super + B` - run browser (`firefox`)
 
-`Super + R` - run wofi run
+`Super + R` - run rofi run
 
 `Super + W` - change wallpapers with `waytrogen`
 
