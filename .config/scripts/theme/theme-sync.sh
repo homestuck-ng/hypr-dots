@@ -186,7 +186,7 @@ execute_wallust_generation() {
     log_debug "Using absolute wallpaper path: $abs_wallpaper"
     
     # Run wallust with dynamic threshold
-    if ! wallust run "$abs_wallpaper" --dynamic-threshold 2>/dev/null; then
+    if ! matugen image "$abs_wallpaper" >/dev/null; then
         die "Wallust theme generation failed for: $abs_wallpaper"
     fi
     
