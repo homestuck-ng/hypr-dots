@@ -9,6 +9,7 @@
 
 window#waybar {
   background: @background;
+  opacity: 1;
   border: 0px solid @color5;
 }
 

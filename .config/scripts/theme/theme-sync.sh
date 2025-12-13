@@ -30,14 +30,11 @@ readonly LOCK_FILE="/tmp/${SCRIPT_NAME%.sh}.lock"
 
 # Script paths
 readonly WOFI_SCRIPT="$CONFIG_DIR/scripts/theme/wofi-colors.sh"
-readonly WAYBAR_SCRIPT="$CONFIG_DIR/scripts/theme/waybar-detection.sh"
 readonly GTK_SCRIPT="$CONFIG_DIR/scripts/theme/gtk-colors.sh"
 
 # Hyprswitch configuration
 readonly HYPRSWITCH_CSS="$CONFIG_DIR/hypr/config/hyprswitch.css"
 
-# Global state
-declare -g SKIP_WAYBAR_DETECTION=0
 
 # --- Wallpaper Management Functions ---
 get_current_wallpaper() {
@@ -79,10 +76,7 @@ process_wallpaper() {
     if [[ "$wallpaper" =~ \.(gif|GIF)$ ]]; then
         log_info "Detected GIF wallpaper, extracting frame for color processing"
         wallpaper=$(extract_gif_frame "$wallpaper" "$GIF_FRAME")
-        SKIP_WAYBAR_DETECTION=1
-        log_debug "Will skip waybar detection for GIF wallpaper"
     else
-        SKIP_WAYBAR_DETECTION=0
         log_debug "Static wallpaper detected, will run full processing"
     fi
     
@@ -135,24 +129,6 @@ update_hyprlock_config() {
     log_success "Updated hyprlock background configuration"
 }
 
-# --- Theme Script Execution Functions ---
-execute_waybar_detection() {
-    local -r wallpaper="$1"
-    
-    if [[ $SKIP_WAYBAR_DETECTION -eq 1 ]]; then
-        log_info "Skipping waybar wallpaper detection for GIF"
-        return 0
-    fi
-    
-    validate_executable "$WAYBAR_SCRIPT" "Waybar wallpaper detection script"
-    
-    log_debug "Executing waybar wallpaper detection"
-    if ! "$WAYBAR_SCRIPT" "$wallpaper"; then
-        die "Waybar wallpaper detection script failed"
-    fi
-    
-    log_success "Waybar wallpaper detection completed"
-}
 
 execute_gtk_theme_update() {
     validate_executable "$GTK_SCRIPT" "GTK theme script"
@@ -165,12 +141,8 @@ execute_gtk_theme_update() {
     log_success "GTK theme update completed"
 }
 
-execute_wallust_generation() {
+execute_matugen_generation() {
     local -r wallpaper="$1"
-
-    # Create .cache/wallust/colors_neopywal.vim for neovim colors scheme
-
-    touch ~/.cache/wallust/colors_neopywal.vim
 
     log_debug "Executing wallust theme generation"
     
@@ -178,19 +150,15 @@ execute_wallust_generation() {
     if [[ ! -r "$wallpaper" ]]; then
         die "Wallpaper file not readable: $wallpaper"
     fi
-    
-    # Get absolute path for wallust
-    local abs_wallpaper
-    abs_wallpaper=$(realpath "$wallpaper" 2>/dev/null) || die "Failed to resolve absolute path for: $wallpaper"
-    
-    log_debug "Using absolute wallpaper path: $abs_wallpaper"
+ 
+    log_debug "Using absolute wallpaper path: $wallpaper"
     
     # Run wallust with dynamic threshold
-    if ! matugen image "$abs_wallpaper" >/dev/null; then
-        die "Wallust theme generation failed for: $abs_wallpaper"
+    if ! matugen image "$wallpaper" >/dev/null; then
+        die "Wallust theme generation failed for: $wallpaper"
     fi
     
-    log_success "Wallust theme generation completed"
+    log_success "Matugen theme generation completed"
 }
 
 execute_wofi_color_update() {
@@ -211,9 +179,8 @@ execute_theme_scripts() {
     log_info "Executing theme update scripts"
     
     # Execute scripts in order
-    execute_waybar_detection "$wallpaper"
     execute_gtk_theme_update
-    execute_wallust_generation "$wallpaper"
+    execute_matugen_generation "$wallpaper"
     execute_wofi_color_update
     
     log_success "All theme scripts executed successfully"
@@ -230,21 +197,6 @@ reload_hyprland() {
     log_success "Hyprland configuration reloaded"
 }
 
-reload_waybar() {
-    log_debug "Reloading Waybar"
-    
-    # Stop existing waybar processes
-    pkill waybar 2>/dev/null || true
-    sleep 0.5
-    
-    # Start waybar in background
-    if command -v waybar >/dev/null 2>&1; then
-        waybar &>/dev/null &
-        log_success "Waybar reloaded"
-    else
-        die "Waybar command not found"
-    fi
-}
 
 restart_dunst() {
     log_debug "Restarting Dunst notification daemon"
@@ -332,12 +284,9 @@ reload_system_components() {
     
     # Reload components in order
     reload_hyprland
-    # reload_waybar
     # restart_dunst
     reload_mako
     restart_hyprswitch
-    #reload_hyprland_plugins
-    reload_waybar
     log_success "All system components reloaded successfully"
 }
 
@@ -353,7 +302,7 @@ main() {
     ensure_directory "$(dirname "$WALLPAPER_CACHE")"
     
     # Validate system dependencies
-    validate_dependencies "swww" "wallust" "hyprctl"
+    validate_dependencies "swww" "matugen" "hyprctl"
     
     # Process current wallpaper (handles GIF extraction)
     local wallpaper

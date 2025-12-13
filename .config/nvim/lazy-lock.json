@@ -1,4 +1,5 @@
 {
+  "base16-nvim": { "branch": "master", "commit": "e05bcb99951d8ae4ecbf4ae053922fd2be6263a5" },
   "lazy.nvim": { "branch": "main", "commit": "85c7ff3711b730b4030d03144f6db6375044ae82" },
-  "neopywal": { "branch": "master", "commit": "09188d79b45694141ec779d05cbcc75f994639d1" }
+  "transparent.nvim": { "branch": "main", "commit": "8ac59883de84e9cd1850ea25cf087031c5ba7d54" }
 }

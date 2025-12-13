@@ -1,8 +1,5 @@
-[env]
-term = "xterm-256color"
-
 [general]
-  import = ["~/.config/alacritty-themes/alacritty-colors.conf"]
+  import = ["~/.config/alacritty/alacritty-colors.toml"]
 
 
 [window]

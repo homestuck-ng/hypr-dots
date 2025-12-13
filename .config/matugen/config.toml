@@ -1,0 +1,40 @@
+[config.wallpaper]
+command = "swww"
+arguments = ["img", "--transition-type", "center"]
+set = false
+
+
+
+[templates.waybar]
+input_path = './templates/waybar-colors.css'
+output_path = '~/.config/waybar/colors.css'
+post_hook = 'pkill -SIGUSR2 waybar'
+
+
+[templates.hyprland]
+input_path = './templates/hyprland-colors.conf'
+output_path = '~/.config/hypr/config/border.conf'
+post_hook = 'hyprctl reload'
+
+[templates.alacritty]
+input_path = './templates/alacritty-colors.toml'
+output_path = '~/.config/alacritty/alacritty-colors.toml'
+
+[templates.neovim]
+input_path = './templates/nvim-colors.lua'
+output_path = '~/.config/nvim/colors/matugen.lua'
+post_hook = 'nvim --headless -c "colorscheme matugen" -c "qa"'
+
+[templates.mako]
+input_path = './templates/mako-colors'
+output_path = '~/.config/mako/config'
+post_hook = 'makoctl reload'
+
+[templates.sway]
+input_path = './templates/sway-colors.conf'
+output_path = '~/.config/sway/colors.conf'
+post_hook = 'swaymsg reload'
+
+[templates.rofi]
+input_path = './templates/rofi-colors.rasi'
+output_path = '~/.config/rofi/colors.rasi'
