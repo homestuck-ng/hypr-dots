@@ -28,11 +28,11 @@
 ### **Fast requirements install**
 You can install all dependencies using:
 
-    yay -S --noconfirm cliphist blueman pavucontrol waybar matugen fastfetch fish firefox switch swww hyprctl playerctl imagemagick alacritty nwg-look rofi moki neovim waytrogen flameshot
+    yay -S --noconfirm cliphist battery-notify blueman pavucontrol waybar matugen fastfetch fish firefox switch swww hyprctl playerctl imagemagick alacritty nwg-look rofi moki neovim waytrogen flameshot
 
 or
 
-    paru -S --noconfirm cliphist blueman pavucontrol waybar matugen fastfetch fish switch swww hyprctl imagemagick alacritty nwg-look rofi moki neovim waytrogen flameshot
+    paru -S --noconfirm cliphist blueman battey-notify pavucontrol waybar matugen fastfetch fish switch swww hyprctl imagemagick alacritty nwg-look rofi moki neovim waytrogen flameshot
 
 ### **Install dotfiles**
     git clone https://github.com/homestuck-ng/hypr-dots.git
