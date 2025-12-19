@@ -114,7 +114,7 @@
   "format-disconnected": "{icon}",
   "format-disabled": "{icon}",
   "interval": 5,
-  "tooltip-format": "{essid}\t{gwaddr}",
+  "tooltip-format": "{essid}\t{ipaddr}",
   "on-click": "rfkill toggle wifi",
   "on-click-right": "nm-connection-editor",
   "tooltip": true,
